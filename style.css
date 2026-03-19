@@ -1,0 +1,54 @@
+body{
+font-family: Arial;
+background:#0b3d2e;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.topo{
+position:relative;
+margin-bottom:30px;
+}
+
+.topo h2{
+text-align:center;
+margin:0;
+font-size:28px;
+}
+
+#downloadPdf{
+position:absolute;
+right:0;
+top:0;
+padding:8px 15px;
+font-size:14px;
+cursor:pointer;
+}
+
+input{
+display:block;
+margin:10px auto;
+padding:10px;
+width:260px;
+font-size:16px;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+border:none;
+border-radius:5px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+.hidden{
+display:none;
+}

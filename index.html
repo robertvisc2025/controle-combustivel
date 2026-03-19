@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Controle de Combustível</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="topo">
+
+<h2>CONTROLE DE COMBUSTÍVEL</h2>
+
+<button id="downloadPdf" class="hidden">BAIXAR PDF</button>
+
+</div>
+
+<div id="app">
+
+<div id="telaInicial">
+
+<input id="embarcacao" placeholder="Nome da embarcação">
+
+<button onclick="iniciarViagem()">INICIAR VIAGEM</button>
+
+</div>
+
+
+<div id="inicioViagem" class="hidden">
+
+<h3>SAÍDA</h3>
+
+<input id="origem" placeholder="Porto de Origem">
+
+<input id="dataInicio" placeholder="Data">
+
+<input id="horaInicio" placeholder="Hora">
+
+<input id="tanqueInicio" placeholder="Combustível no tanque (L)">
+
+<button onclick="confirmarInicio()">INICIAR</button>
+
+</div>
+
+
+<div id="abastecimentoTela" class="hidden">
+
+<h3 id="numeroAbastecimento"></h3>
+
+<input id="dataAbastecimento" placeholder="Data">
+
+<input id="horaAbastecimento" placeholder="Hora">
+
+<input id="tanqueAbastecimento" placeholder="Tanque antes do abastecimento (L)">
+
+<input id="qtdAbastecida" placeholder="Quantidade abastecida (L)">
+
+<button onclick="salvarAbastecimento()">SEGUIR VIAGEM</button>
+
+<button onclick="confirmarFinal()">FINALIZAR VIAGEM</button>
+
+</div>
+
+
+<div id="destinoTela" class="hidden">
+
+<h3>DESTINO FINAL</h3>
+
+<input id="destino" placeholder="Destino final">
+
+<input id="dataDestino" placeholder="Data">
+
+<input id="horaDestino" placeholder="Hora">
+
+<input id="tanqueFinal" placeholder="Combustível no tanque (L)">
+
+<button onclick="finalizarRegistro()">FINALIZAR REGISTRO</button>
+
+</div>
+
+
+<div id="viagemFinalizada" class="hidden">
+
+<h2>VIAGEM FINALIZADA</h2>
+
+<p>Baixe o seu consumo de combustível</p>
+
+<button onclick="gerarPDF()">BAIXAR PDF</button>
+
+<br><br>
+
+<button onclick="novaViagem()">INICIAR NOVA VIAGEM</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
